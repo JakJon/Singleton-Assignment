@@ -32,29 +32,11 @@ namespace SingletonAssignment
             timer.Start();
         }
 
-        public string getRunningTime()
-        {
-            return timer.ElapsedMilliseconds.ToString();
-        }
-
         public string getTime(timeUnit Unit)
         {
             long timeSeconds = timer.ElapsedMilliseconds / Convert.ToInt32(Unit);
             return timeSeconds.ToString();
         }
 
-        public string getRunningTimeInMinutes()
-        {
-            long timeSeconds = timer.ElapsedMilliseconds / 1000;
-            long timeMinutes = timeSeconds / 60;
-            return timeMinutes.ToString();
-        }
-
-        public string getRunningTimeInHours()
-        {
-            long timeSeconds = timer.ElapsedMilliseconds / 1000;
-            long timeHours = timeSeconds / 3600;
-            return timeHours.ToString();
-        }
     }
 }
