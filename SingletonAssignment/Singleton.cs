@@ -12,7 +12,14 @@ namespace SingletonAssignment
 
         private SingletonTimer()
         {
-            
+
+        }
+
+        public enum timeUnit {
+            Millisecond = 1,
+            Second = 1000,
+            Minute = 60000,
+            Hour = 3600000
         }
 
         public static SingletonTimer GetSingletonTimer()
@@ -30,9 +37,9 @@ namespace SingletonAssignment
             return timer.ElapsedMilliseconds.ToString();
         }
 
-        public string getRunningTimeInSeconds()
+        public string getTime(timeUnit Unit)
         {
-            long timeSeconds = timer.ElapsedMilliseconds / 1000;
+            long timeSeconds = timer.ElapsedMilliseconds / Convert.ToInt32(Unit);
             return timeSeconds.ToString();
         }
 

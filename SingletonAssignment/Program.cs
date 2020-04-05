@@ -27,22 +27,22 @@ namespace SingletonAssignment
                 switch (input)
                 {
                     case "I":
-                        time = timer.getRunningTime();
+                        time = timer.getTime(SingletonTimer.timeUnit.Millisecond);
                         Console.WriteLine("\n\n\t RUN TIME: " + time + " Milliseconds");
                         start();
                         break;
                     case "S":
-                        time = timer.getRunningTimeInSeconds();
+                        time = timer.getTime(SingletonTimer.timeUnit.Second);
                         Console.WriteLine("\n\n\t RUN TIME: " + time + " Seconds");
                         start();
                         break;
                     case "M":
-                        time = timer.getRunningTimeInMinutes();
+                        time = timer.getTime(SingletonTimer.timeUnit.Minute);
                         Console.WriteLine("\n\n\t RUN TIME: " + time + " Minutes");
                         start();
                         break;
                     case "H":
-                        time = timer.getRunningTimeInHours();
+                        time = timer.getTime(SingletonTimer.timeUnit.Hour);
                         Console.WriteLine("\n\n\t RUN TIME: " + time + " Hours");
                         start();
                         break;
